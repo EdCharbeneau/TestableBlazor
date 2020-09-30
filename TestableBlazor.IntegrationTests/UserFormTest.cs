@@ -61,7 +61,7 @@ namespace TestableBlazor.IntegrationTests
             // Act
             cut.Find("#regionSelect").Change("BB");
             // Assert
-            Assert.Equal("Red BB", cut.Instance.Model.SelectedTeam);
+            cut.WaitForAssertion(() => Assert.Equal("Red BB", cut.Instance.Model.SelectedTeam));
         }
 
     }
