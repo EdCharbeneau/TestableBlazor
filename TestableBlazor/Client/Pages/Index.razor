@@ -1,0 +1,82 @@
+﻿@page "/"
+@inject TestableBlazor.Client.Services.IDataService DataService
+
+<EditForm Model="Model" OnValidSubmit="HandleValidSubmit" class="col-sm-4">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="form-group">
+        <label>Birth Date</label>
+        <InputDate @bind-Value="Model.BirthDate" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>First Name</label>
+        <InputText @bind-Value="Model.FirstName"  class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <InputText @bind-Value="Model.LastName"  class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label class="form-group">Email</label>
+        <InputText @bind-Value="Model.Email"  class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label>Region</label>
+        <InputSelect id="regionSelect" Value="Model.SelectedRegion"
+                     ValueChanged="@((string s) => SelectedRegionChanged(s))"
+                     ValueExpression="@(() => Model.SelectedRegion)"
+                     class="form-control">
+            @if (Model.Regions != null)
+            {
+                foreach (var item in Model.Regions)
+                {
+                    <option value="@item">@item</option>
+                }
+            }
+            else
+            {
+                <span>Loading...</span>
+            }
+        </InputSelect>
+    </div>
+    <div class="form-group">
+        <label for="teamSelect">Team</label>
+        <InputSelect id="teamSelect" @bind-Value="Model.SelectedTeam" class="form-control">
+            @if (Model.Teams != null)
+            {
+                foreach (var item in Model.Teams)
+                {
+                    <option value="@item">@item</option>
+                }
+            }
+            else
+            {
+                <span>Loading...</span>
+            }
+        </InputSelect>
+    </div>
+    <button type="submit">Submit</button>
+</EditForm>
+
+@code {
+
+    [Parameter] public UserFormViewModel Model { get; set; } = new UserFormViewModel();
+
+    void HandleValidSubmit()
+    {
+    }
+
+    async Task SelectedRegionChanged(string value)
+    {
+        Model.SelectedRegion = value;
+        Model.Teams = await DataService.GetTeamsByRegion(Model.SelectedRegion);
+        Model.SelectedTeam = Model.Teams[0];
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        // init here
+        Model.Regions = await DataService.GetRegions();
+        await SelectedRegionChanged(Model.Regions[0]);
+    }
+}
