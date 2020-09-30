@@ -27,39 +27,38 @@ namespace TestableBlazor.IntegrationTests
         public void SettingRegionSelectsFirstItem()
         {
             // Arrange
-            using var ctx = new TestContext();
             var mockDataService = Mock.Create<IDataService>();
             Mock.Arrange(() => mockDataService.GetRegions())
                 .Returns(() => Task.Run(() => new string[] { "AA", "BB", "CC", "DD" }));
             Mock.Arrange(() => mockDataService.GetTeamsByRegion(Arg.AnyString))
                 .Returns((string region) => Task.Run(() => new string[] { $"Red {region}", $"Green {region}", $"Blue {region}" }));
-            ctx.Services.AddSingleton(mockDataService);
+            Services.AddSingleton(mockDataService);
 
-            var cut = ctx.RenderComponent<Index>();
+            var cut = RenderComponent<Index>();
 
             // Act
             // Component internally calls IDataService.GetRegions()  and IDataService.GetTeamsByRegion()
 
             // Assert
-            Assert.Equal("AA", cut.Instance.Model.SelectedRegion);
+            cut.WaitForAssertion(() => Assert.Equal("AA", cut.Instance.Model.SelectedRegion));
         }
 
         [Fact(DisplayName = "Selecting a region selects the first team value.")]
         public void SettingRegionSelectsFirstTeam()
         {
             // Arrange
-            using var ctx = new TestContext();
             var mockDataService = Mock.Create<IDataService>();
             Mock.Arrange(() => mockDataService.GetRegions())
                 .Returns(() => Task.Run(() => new string[] { "AA", "BB", "CC", "DD" }));
             Mock.Arrange(() => mockDataService.GetTeamsByRegion(Arg.AnyString))
                 .Returns((string region) => Task.Run(() => new string[] { $"Red {region}", $"Green {region}", $"Blue {region}" }));
-            ctx.Services.AddSingleton(mockDataService);
+            Services.AddSingleton(mockDataService);
 
-            var cut = ctx.RenderComponent<Index>();
+            var cut = RenderComponent<Index>();
             var x = cut.Markup;
             // Act
             cut.Find("#regionSelect").Change("BB");
+
             // Assert
             cut.WaitForAssertion(() => Assert.Equal("Red BB", cut.Instance.Model.SelectedTeam));
         }
