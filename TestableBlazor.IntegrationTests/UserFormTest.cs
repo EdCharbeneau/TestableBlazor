@@ -1,5 +1,6 @@
 ﻿using Bunit;
 using Microsoft.Extensions.DependencyInjection;
+//using NSubstitute;
 using System.Threading.Tasks;
 using Telerik.JustMock;
 using TestableBlazor.Client;
@@ -11,6 +12,25 @@ namespace TestableBlazor.IntegrationTests
 {
     public class UserFormTest : TestContext
     {
+        //private void AddMockDataService()
+        //{
+        //    var mockDataService = Substitute.For<IDataService>();
+        //    mockDataService.GetRegions()
+        //        .Returns(new string[] { "AA", "BB", "CC", "DD" });
+        //    mockDataService.GetTeamsByRegion(Arg.Any<string>())
+        //        .Returns(x => new string[] { $"Red {x.Arg<string>()}", $"Green {x.Arg<string>()}", $"Blue {x.Arg<string>()}" });
+        //    Services.AddSingleton(mockDataService);
+        //}
+
+        private void AddMockDataService()
+        {
+            var mockDataService = Mock.Create<IDataService>();
+            Mock.Arrange(() => mockDataService.GetRegions())
+                .Returns(Task.FromResult(new string[] { "AA", "BB", "CC", "DD" }));
+            Mock.Arrange(() => mockDataService.GetTeamsByRegion(Arg.AnyString))
+                .Returns((string region) => Task.FromResult(new string[] { $"Red {region}", $"Green {region}", $"Blue {region}" }));
+            Services.AddSingleton(mockDataService);
+        }
 
         [Fact(DisplayName = "User form initialized with default birth year.")]
         public void InitializedWithDefaultBirthYear()
@@ -27,12 +47,7 @@ namespace TestableBlazor.IntegrationTests
         public void SettingRegionSelectsFirstItem()
         {
             // Arrange
-            var mockDataService = Mock.Create<IDataService>();
-            Mock.Arrange(() => mockDataService.GetRegions())
-                .Returns(() => Task.Run(() => new string[] { "AA", "BB", "CC", "DD" }));
-            Mock.Arrange(() => mockDataService.GetTeamsByRegion(Arg.AnyString))
-                .Returns((string region) => Task.Run(() => new string[] { $"Red {region}", $"Green {region}", $"Blue {region}" }));
-            Services.AddSingleton(mockDataService);
+            AddMockDataService();
 
             var cut = RenderComponent<Index>();
 
@@ -47,15 +62,10 @@ namespace TestableBlazor.IntegrationTests
         public void SettingRegionSelectsFirstTeam()
         {
             // Arrange
-            var mockDataService = Mock.Create<IDataService>();
-            Mock.Arrange(() => mockDataService.GetRegions())
-                .Returns(() => Task.Run(() => new string[] { "AA", "BB", "CC", "DD" }));
-            Mock.Arrange(() => mockDataService.GetTeamsByRegion(Arg.AnyString))
-                .Returns((string region) => Task.Run(() => new string[] { $"Red {region}", $"Green {region}", $"Blue {region}" }));
-            Services.AddSingleton(mockDataService);
-
+            AddMockDataService();
             var cut = RenderComponent<Index>();
             var x = cut.Markup;
+
             // Act
             cut.Find("#regionSelect").Change("BB");
 
