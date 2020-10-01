@@ -1,6 +1,5 @@
 ﻿using Bunit;
 using Microsoft.Extensions.DependencyInjection;
-//using NSubstitute;
 using System.Threading.Tasks;
 using Telerik.JustMock;
 using TestableBlazor.Client;
@@ -12,15 +11,6 @@ namespace TestableBlazor.IntegrationTests
 {
     public class UserFormTest : TestContext
     {
-        //private void AddMockDataService()
-        //{
-        //    var mockDataService = Substitute.For<IDataService>();
-        //    mockDataService.GetRegions()
-        //        .Returns(new string[] { "AA", "BB", "CC", "DD" });
-        //    mockDataService.GetTeamsByRegion(Arg.Any<string>())
-        //        .Returns(x => new string[] { $"Red {x.Arg<string>()}", $"Green {x.Arg<string>()}", $"Blue {x.Arg<string>()}" });
-        //    Services.AddSingleton(mockDataService);
-        //}
 
         private void AddMockDataService()
         {
@@ -55,7 +45,7 @@ namespace TestableBlazor.IntegrationTests
             // Component internally calls IDataService.GetRegions()  and IDataService.GetTeamsByRegion()
 
             // Assert
-            cut.WaitForAssertion(() => Assert.Equal("AA", cut.Instance.Model.SelectedRegion));
+            Assert.Equal("AA", cut.Instance.Model.SelectedRegion);
         }
 
         [Fact(DisplayName = "Selecting a region selects the first team value.")]
@@ -64,13 +54,12 @@ namespace TestableBlazor.IntegrationTests
             // Arrange
             AddMockDataService();
             var cut = RenderComponent<Index>();
-            var x = cut.Markup;
 
             // Act
             cut.Find("#regionSelect").Change("BB");
 
             // Assert
-            cut.WaitForAssertion(() => Assert.Equal("Red BB", cut.Instance.Model.SelectedTeam));
+            Assert.Equal("Red BB", cut.Instance.Model.SelectedTeam);
         }
 
     }
