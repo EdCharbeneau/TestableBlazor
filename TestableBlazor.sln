@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestableBlazor.IntegrationT
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9E7CC03A-08B7-4B30-BCD8-4829C6E84481}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestableBlazor.e2e", "TestableBlazor.e2e\TestableBlazor.e2e.csproj", "{06722827-2882-4E82-807A-C695B6D101CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{7BC3739F-ADCE-47A9-A415-41B87D8EDC67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BC3739F-ADCE-47A9-A415-41B87D8EDC67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BC3739F-ADCE-47A9-A415-41B87D8EDC67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06722827-2882-4E82-807A-C695B6D101CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06722827-2882-4E82-807A-C695B6D101CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06722827-2882-4E82-807A-C695B6D101CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06722827-2882-4E82-807A-C695B6D101CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{1D3BD03D-3353-4AAB-AD58-7BEC36597CBA} = {9E7CC03A-08B7-4B30-BCD8-4829C6E84481}
 		{7BC3739F-ADCE-47A9-A415-41B87D8EDC67} = {9E7CC03A-08B7-4B30-BCD8-4829C6E84481}
+		{06722827-2882-4E82-807A-C695B6D101CC} = {9E7CC03A-08B7-4B30-BCD8-4829C6E84481}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B36F77D5-277A-46E9-9ABF-05F86B657582}
