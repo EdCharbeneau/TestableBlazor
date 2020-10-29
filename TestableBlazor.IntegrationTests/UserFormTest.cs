@@ -1,26 +1,46 @@
 ﻿using Bunit;
+using Bunit.TestDoubles;
 using Microsoft.Extensions.DependencyInjection;
-using System.Linq;
+using System.ComponentModel;
 using System.Threading.Tasks;
+using Telerik.Blazor.Components;
 using Telerik.JustMock;
 using TestableBlazor.Client;
 using TestableBlazor.Client.Pages;
 using TestableBlazor.Client.Services;
 using Xunit;
+using static Bunit.ComponentParameterFactory;
+
 
 namespace TestableBlazor.IntegrationTests
 {
     public class UserFormTest : TestContext
     {
+        public UserFormTest()
+        {
+            // We're testing a Telerik application
+            RenderTree.Add<TelerikRootComponent>();
+            /// Add Root Component
+            AddMockDataService();
+        }
 
         private void AddMockDataService()
         {
             var mockDataService = Mock.Create<IDataService>();
+
             Mock.Arrange(() => mockDataService.GetRegions())
-                .Returns(Task.FromResult(new string[] { "AA", "BB", "CC", "DD" }));
+                .Returns(
+                    Task.FromResult(new string[] { "AA", "BB", "CC", "DD" })
+                );
+
             Mock.Arrange(() => mockDataService.GetTeamsByRegion(Arg.AnyString))
-                .Returns((string region) => Task.FromResult(new string[] { $"Red {region}", $"Green {region}", $"Blue {region}" }));
+                .Returns(
+                    (string region) => Task.FromResult(new string[] { $"Red {region}", $"Green {region}", $"Blue {region}" })
+                );
+
             Services.AddSingleton(mockDataService);
+            Services.AddTelerikBlazor();
+            Services.AddMockJSRuntime();
         }
 
         [Fact(DisplayName = "User form initialized with default birth year.")]
@@ -38,12 +58,14 @@ namespace TestableBlazor.IntegrationTests
         public void RegionChangeLoadsTeams()
         {
             // Arrange
-            AddMockDataService();
-
             var cut = RenderComponent<Index>();
 
             // Act
-            cut.Find("#regionSelect").Change("BB");
+            var ddl = cut.FindComponent<TelerikDropDownList<string, string>>();
+            cut.InvokeAsync(() => ddl.Instance.ValueChanged.InvokeAsync("BB"));
+
+            //await cut.Instance.SelectedRegionChanged("BB");
+
             var expected = new string[] { "Red BB", "Green BB", "Blue BB" };
 
             // Assert
@@ -53,27 +75,35 @@ namespace TestableBlazor.IntegrationTests
         [Fact(DisplayName = "Region first item is selected on initialization.")]
         public void SettingRegionSelectsFirstItem()
         {
-            // Arrange
-            AddMockDataService();
-
+            // Render the index page
+            // Component internally calls IDataService.GetRegions()
+            //  and IDataService.GetTeamsByRegion()
             var cut = RenderComponent<Index>();
-            // Act
-            // Component internally calls IDataService.GetRegions()  and IDataService.GetTeamsByRegion()
 
-            // Assert
+            // Get the Model property from the component Instance
+            var cutModel = cut.Instance.Model;
+
+            // Did our Model bind?
+            // Was the Regions collection filled?
+            Assert.Collection(cutModel.Regions,
+                                i => i.Contains("AA"),
+                                i => i.Contains("BB"),
+                                i => i.Contains("CC"),
+                                i => i.Contains("DD"));
+
+            // Was the first Region selected by default?
             Assert.Equal("AA", cut.Instance.Model.SelectedRegion);
         }
 
 
         [Fact(DisplayName = "Selecting a region selects the first team value.")]
-        public void SettingRegionSelectsFirstTeam()
+        async Task SettingRegionSelectsFirstTeam()
         {
             // Arrange
-            AddMockDataService();
             var cut = RenderComponent<Index>();
 
             // Act
-            cut.Find("#regionSelect").Change("BB");
+            await cut.Instance.SelectedRegionChanged("BB");
 
             // Assert
             Assert.Equal("Red BB", cut.Instance.Model.SelectedTeam);

@@ -1,72 +1,75 @@
 ﻿@page "/"
 @inject TestableBlazor.Client.Services.IDataService DataService
 
-<EditForm Model="Model" OnValidSubmit="HandleValidSubmit" class="col-sm-4">
-    <DataAnnotationsValidator />
-    <ValidationSummary />
-    <div class="form-group">
-        <label>Birth Date</label>
-        <InputDate @bind-Value="Model.BirthDate" class="form-control" />
-    </div>
-    <div class="form-group">
-        <label>First Name</label>
-        <InputText @bind-Value="Model.FirstName"  class="form-control"/>
-    </div>
-    <div class="form-group">
-        <label>Last Name</label>
-        <InputText @bind-Value="Model.LastName"  class="form-control"/>
-    </div>
-    <div class="form-group">
-        <label class="form-group">Email</label>
-        <InputText @bind-Value="Model.Email"  class="form-control"/>
-    </div>
-    <div class="form-group">
-        <label>Region</label>
-        <InputSelect id="regionSelect" Value="Model.SelectedRegion"
-                     ValueChanged="@((string s) => SelectedRegionChanged(s))"
-                     ValueExpression="@(() => Model.SelectedRegion)"
-                     class="form-control">
-            @if (Model.Regions != null)
-            {
-                foreach (var item in Model.Regions)
-                {
-                    <option value="@item">@item</option>
-                }
-            }
-            else
-            {
-                <span>Loading...</span>
-            }
-        </InputSelect>
-    </div>
-    <div class="form-group">
-        <label for="teamSelect">Team</label>
-        <InputSelect id="teamSelect" @bind-Value="Model.SelectedTeam" class="form-control">
-            @if (Model.Teams != null)
-            {
-                foreach (var item in Model.Teams)
-                {
-                    <option value="@item">@item</option>
-                }
-            }
-            else
-            {
-                <span>Loading...</span>
-            }
-        </InputSelect>
-    </div>
-    <button type="submit">Submit</button>
-</EditForm>
+<div class="col-sm-4">
+
+    <Alert>I'm dismiss-able!</Alert>
+
+    <EditForm Model="Model" OnValidSubmit="HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        <div class="form-group">
+            <label for="birthDateField">Birth Date</label>
+            <TelerikDatePicker Id="birthDateField" @bind-Value="Model.BirthDate" Class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="firstNameField">First Name</label>
+            <TelerikTextBox Id="firstNameField" @bind-Value="Model.FirstName" Class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="lastNameField">Last Name</label>
+            <TelerikTextBox Id="lastNameField" @bind-Value="Model.LastName" Class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="emailField">Email</label>
+            <TelerikTextBox Id="emailField" PlaceHolder="email@domain.com" @bind-Value="Model.Email" Class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="regionSelect">Region</label>
+            <TelerikDropDownList Value="Model.SelectedRegion"
+                                 ValueChanged="@((string s) => SelectedRegionChanged(s))"
+                                 ValueExpression="@(() => Model.SelectedRegion)"
+                                 Data="Model.Regions"
+                                 Id="regionSelect"
+                                 Class="form-control"
+                                 Width="100%" />
+        </div>
+        <div class="form-group">
+            <label for="teamSelect">Team</label>
+            <TelerikDropDownList @bind-Value="Model.SelectedTeam"
+                                 Data="Model.Teams"
+                                 Id="teamSelect"
+                                 Class="form-control"
+                                 Width="100%" />
+        </div>
+        <TelerikButton Id="formSubmit" Primary="true">Submit</TelerikButton>
+        <TelerikButton Id="formReset" ButtonType="ButtonType.Reset">Cancel</TelerikButton>
+    </EditForm>
+    <TelerikWindow Visible="isComplete" Modal="true">
+        <WindowActions>
+            <WindowAction Name="Close"></WindowAction>
+        </WindowActions>
+        <WindowTitle>Thank You</WindowTitle>
+        <WindowContent>
+            <p>Thank you, we have received your information and will contact you using the email provided.</p>
+        </WindowContent>
+    </TelerikWindow>
+</div>
 
 @code {
 
-    [Parameter] public UserFormViewModel Model { get; set; } = new UserFormViewModel();
+    [Parameter] 
+    public UserFormViewModel Model { get; set; } = new UserFormViewModel();
+
+    bool isComplete;
 
     void HandleValidSubmit()
     {
+        // Do HTTP
+        isComplete = true;
     }
 
-    async Task SelectedRegionChanged(string value)
+    public async Task SelectedRegionChanged(string value)
     {
         Model.SelectedRegion = value;
         Model.Teams = await DataService.GetTeamsByRegion(Model.SelectedRegion);
