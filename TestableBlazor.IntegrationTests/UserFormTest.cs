@@ -20,7 +20,7 @@ namespace TestableBlazor.IntegrationTests
         {
             // We're testing a Telerik application
             RenderTree.Add<TelerikRootComponent>();
-            /// Add Root Component
+            // Add Root Component
             AddMockDataService();
         }
 

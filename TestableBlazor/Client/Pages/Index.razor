@@ -3,11 +3,15 @@
 
 <div class="col-sm-4">
 
-    <Alert>I'm dismiss-able!</Alert>
+    <Alert IsInfo="true">I'm dismiss-able!</Alert>
 
     <EditForm Model="Model" OnValidSubmit="HandleValidSubmit">
         <DataAnnotationsValidator />
         <ValidationSummary />
+        @*<div class="form-group">
+            <label for="birthDateField">Birth Date</label>
+            <TelerikDatePicker Id="birthDateField" @bind-Value="Model.BirthDate" Class="form-control" />
+        </div>*@
         <div class="form-group">
             <label for="birthDateField">Birth Date</label>
             <TelerikDatePicker Id="birthDateField" @bind-Value="Model.BirthDate" Class="form-control" />
@@ -58,7 +62,7 @@
 
 @code {
 
-    [Parameter] 
+    [Parameter]
     public UserFormViewModel Model { get; set; } = new UserFormViewModel();
 
     bool isComplete;
