@@ -3,7 +3,7 @@ using TestableBlazor.Client.Shared;
 using Xunit;
 
 
-namespace TestableBlazor.IntegrationTests
+namespace TestableBlazor.UnitTests
 {
     public class AlertTests : TestContext
     {

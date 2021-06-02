@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch and Debug Hosted Blazor WebAssembly App",
+            "type": "blazorwasm",
+            "request": "launch",
+            "hosted": true,
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/TestableBlazor/Server/bin/Debug/netcoreapp3.1/TestableBlazor.Server.dll",
+            "cwd": "${workspaceFolder}/TestableBlazor/Server"
+        }
+    ]
+}

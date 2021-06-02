@@ -5,9 +5,9 @@ using System.ComponentModel;
 using System.Threading.Tasks;
 using Telerik.Blazor.Components;
 using Telerik.JustMock;
-using TestableBlazor.Client;
-using TestableBlazor.Client.Pages;
-using TestableBlazor.Client.Services;
+using TestableBlazor.Net5.Client;
+using TestableBlazor.Net5.Client.Pages;
+using TestableBlazor.Net5.Client.Services;
 using Xunit;
 using static Bunit.ComponentParameterFactory;
 
@@ -22,6 +22,7 @@ namespace TestableBlazor.IntegrationTests
             RenderTree.Add<TelerikRootComponent>();
             // Add Root Component
             AddMockDataService();
+            JSInterop.Mode = JSRuntimeMode.Loose;
         }
 
         private void AddMockDataService()
@@ -40,7 +41,6 @@ namespace TestableBlazor.IntegrationTests
 
             Services.AddSingleton(mockDataService);
             Services.AddTelerikBlazor();
-            Services.AddMockJSRuntime();
         }
 
         [Fact(DisplayName = "User form initialized with default birth year.")]

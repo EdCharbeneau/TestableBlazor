@@ -1,30 +1,27 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="JustMock" Version="2021.2.511.1" />
+    <PackageReference Include="bunit" Version="1.1.5" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
-      <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="coverlet.collector" Version="3.0.3">
-      <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="bunit.web" Version="1.1.5" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TestableBlazor\Client\TestableBlazor.Client.csproj" />
-    <ProjectReference Include="..\TestableBlazor\Server\TestableBlazor.Server.csproj" />
-    <ProjectReference Include="..\TestableBlazor\Shared\TestableBlazor.Shared.csproj" />
+    <ProjectReference Include="..\TestableBlazor.Net5\Client\TestableBlazor.Net5.Client.csproj" />
   </ItemGroup>
 
 </Project>
