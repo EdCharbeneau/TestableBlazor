@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Client\TestableBlazor.Client.csproj" />
     <ProjectReference Include="..\Shared\TestableBlazor.Shared.csproj" />
   </ItemGroup>
 

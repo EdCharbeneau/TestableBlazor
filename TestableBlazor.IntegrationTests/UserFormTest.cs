@@ -1,7 +1,5 @@
 ﻿using Bunit;
-using Bunit.TestDoubles;
 using Microsoft.Extensions.DependencyInjection;
-using System.ComponentModel;
 using System.Threading.Tasks;
 using Telerik.Blazor.Components;
 using Telerik.JustMock;
@@ -9,7 +7,6 @@ using TestableBlazor.Net5.Client;
 using TestableBlazor.Net5.Client.Pages;
 using TestableBlazor.Net5.Client.Services;
 using Xunit;
-using static Bunit.ComponentParameterFactory;
 
 
 namespace TestableBlazor.IntegrationTests
