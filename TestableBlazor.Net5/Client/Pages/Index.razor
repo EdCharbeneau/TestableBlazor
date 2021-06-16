@@ -68,15 +68,17 @@
 
     public async Task SelectedRegionChanged(string value)
     {
-        Model.SelectedRegion = value;
-        Model.Teams = await DataService.GetTeamsByRegion(Model.SelectedRegion);
-        Model.SelectedTeam = Model.Teams[0];
+        throw new NotImplementedException();
+        //Model.SelectedRegion = value; // 1
+        //Model.Teams = await DataService.GetTeamsByRegion(Model.SelectedRegion); // 2
+        //Model.SelectedTeam = Model.Teams[0]; // 3
     }
 
     protected override async Task OnInitializedAsync()
     {
+        throw new NotImplementedException();
         // init here
-        Model.Regions = await DataService.GetRegions();
-        await SelectedRegionChanged(Model.Regions[0]);
+        //Model.Regions = await DataService.GetRegions(); // 1
+        //await SelectedRegionChanged(Model.Regions[0]);  // 1
     }
 }
