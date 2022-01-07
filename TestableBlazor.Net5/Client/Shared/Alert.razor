@@ -1,7 +1,7 @@
 ﻿@if (!IsHidden)
 {
     @*<div class="alert @CssAlert">*@
-    <div class="alert">
+    <div class="alert @CssAlert">
         @ChildContent
         <button @onclick="Hide" type="button" class="close" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -20,7 +20,7 @@ else
     void Hide()
     {
         // Logical error
-        IsHidden = false;
+        IsHidden = true;
     }
 
     void Show()

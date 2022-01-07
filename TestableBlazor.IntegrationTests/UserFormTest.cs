@@ -18,7 +18,7 @@ namespace TestableBlazor.IntegrationTests
             // We're testing a Telerik application
             RenderTree.Add<TelerikRootComponent>();
             // Add Root Component
-            // AddMockDataService();
+            AddMockDataService();
             JSInterop.Mode = JSRuntimeMode.Loose;
         }
 
