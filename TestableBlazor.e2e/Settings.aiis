@@ -9,7 +9,7 @@
     "MenuHoldTime": 1.0,
     "SilverlightConnectTimeout": 60000,
     "BaseClassName": "BaseWebAiiTest",
-    "UrlRecordMode": 2,
+    "UrlRecordMode": 1,
     "HighlightBorderColor": -65536,
     "HighlightBorderSize": 1,
     "CodeGenerationElementIdentificationType": 1,
@@ -149,6 +149,30 @@
           },
           "TechnologyType": 2
         }
+      },
+      "Desktop": {
+        "__type": "ArtOfTest.Common.Design.Translation.IdentificationOptionsScheme",
+        "__value": {
+          "CheckFindParamUniqueness": true,
+          "AutoDetectTestRegions": true,
+          "TryAttributeCombinations": true,
+          "AlwaysAssertTagName": true,
+          "IdentificationsPerTag": {
+            "All Elements": {
+              "__type": "ArtOfTest.Common.Design.Translation.IdentificationDescriptorList",
+              "__value": [
+                {
+                  "__type": "ArtOfTest.WebAii.Design.Translation.Desktop.DesktopIdentificationDescriptor",
+                  "__value": {
+                    "PropertyName": "ControlTypeName",
+                    "IsLocked": true
+                  }
+                }
+              ]
+            }
+          },
+          "TechnologyType": 8
+        }
       }
     },
     "UnitTypeTypeGeneration": 1,
@@ -157,65 +181,56 @@
     "IsElementImageCapturingEnabled": true,
     "UseScreenshotCache": true,
     "EnableImageSearch": true,
-    "UseBrowserExtension": true,
+    "UseBrowserExtension": false,
+    "ChromiumFirstInteractionDelay": 500,
+    "FirefoxMinimumJSClickDelay": 100,
+    "TelerikComponentsVersion": 0,
     "ScrollOnImageSearch": true,
     "DisplayElementImagePreview": true,
     "ElementImageThreshold": 90,
     "ElementImageSearchTimeout": 15000,
     "SearchByImageFirst": false,
     "ElementImageSearchDelay": 300,
-    "SimulateRealClickByDefault": false,
-    "SimulateRealTypingByDefault": false,
-    "SimulateRealSilverlightUserByDefault": true,
-    "DefaultDropDownSelection": 1,
+    "SimulateRealClickByDefault": true,
+    "SimulateRealTypingByDefault": true,
+    "DefaultDropDownSelection": 2,
     "QuickExecutionElementWaitTimeout": 15000,
     "QuickExecutionClientReadyTimeout": 60000,
-    "QcServerUrl": null,
-    "QcUserName": "",
-    "QcPassword": "",
-    "QcSkipAuthDialog": false,
-    "QcDomain": null,
-    "QcProject": null,
     "TfsUserName": "",
     "TfsPassword": "",
     "TfsSkipAuthDialog": true,
     "TfsDomain": "",
-    "TeamPulseServerUrl": "",
-    "TpUserName": "",
-    "TpPassword": "",
-    "TpUseWindowsAuth": false,
-    "TpSkipAuthDialog": false,
-    "TpDefaultProjectId": -1,
     "RecordWpfWindowStateChanged": false,
     "PromptNameOnAddElement": true,
     "DefaultWPFApplication": null,
+    "DefaultWPFApplicationArgs": null,
+    "DefaultDesktopApplication": null,
+    "DefaultDesktopApplicationArgs": null,
     "UseLegacySilverlightFindLogic": false,
-    "ProjectGuid": "2d550166-bf5b-4895-a013-70f7b8a43e7b",
+    "ProjectGuid": "73b59053-d561-4dd4-a758-59d028d9c592",
     "SourceControlRepository": null,
     "IsOnline": false,
-    "ProjectLanguage": 1,
+    "ProjectLanguage": 2,
     "ProjectReferences": [
       "System",
       "System.Core",
-      "ArtOfTest.WebAii, Version=2022.1.215.0, Culture=neutral, PublicKeyToken=4fd5f65be123776c",
-      "ArtOfTest.WebAii.Messaging, Version=2022.1.215.0, Culture=neutral, PublicKeyToken=4fd5f65be123776c",
-      "ArtOfTest.WebAii.Design, Version=2022.1.215.0, Culture=neutral, PublicKeyToken=4fc62bbc3827ab1d",
-      "Telerik.WebAii.Controls.Html, Version=2022.1.215.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
-      "Telerik.WebAii.Controls.Xaml, Version=2022.1.215.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
-      "Telerik.WebAii.Controls.Xaml.Wpf, Version=2022.1.215.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
-      "Telerik.TestingFramework.Controls.KendoUI, Version=2022.1.215.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
-      "Telerik.TestingFramework.Controls.KendoUI.Angular, Version=2022.1.215.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
-      "Telerik.TestingFramework.Controls.TelerikUI.Blazor, Version=2022.1.215.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
-      "Telerik.TestStudio.Translators.Common, Version=2022.1.215.0, Culture=neutral, PublicKeyToken=528163f3e645de45",
-      "..\\..\\..\\..\\..\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\Common7\\IDE\\PublicAssemblies\\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll",
-      "System.Windows.Forms"
+      "ArtOfTest.WebAii, Version=2024.1.219.1, Culture=neutral, PublicKeyToken=4fd5f65be123776c",
+      "ArtOfTest.WebAii.Messaging, Version=2024.1.219.1, Culture=neutral, PublicKeyToken=4fd5f65be123776c",
+      "ArtOfTest.WebAii.Design, Version=2024.1.219.1, Culture=neutral, PublicKeyToken=4fc62bbc3827ab1d",
+      "Telerik.WebAii.Controls.Html, Version=2024.1.219.1, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.WebAii.Controls.Xaml, Version=2024.1.219.1, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.WebAii.Controls.Xaml.Wpf, Version=2024.1.219.1, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.TestingFramework.Controls.KendoUI, Version=2024.1.219.1, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.TestingFramework.Controls.KendoUI.Angular, Version=2024.1.219.1, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.TestingFramework.Controls.TelerikUI.Blazor, Version=2024.1.219.1, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.TestStudio.Translators.Common, Version=2024.1.219.1, Culture=neutral, PublicKeyToken=528163f3e645de45"
     ],
     "ScheduleServerUrl": "http://localhost:8009",
     "IsScheduleServerRemote": false,
     "NotificationSettings": null,
     "WebComponents": true,
-    "ProjectVersion": "2022.1.215.0",
-    "Namespace": "TestableBlazor.e2e",
+    "ProjectVersion": "2024.1.207.0",
+    "Namespace": "TestableBlazor_e2e",
     "AssemblyName": "TestableBlazor.e2e",
     "OutputFolder": "bin",
     "ExcludedFiles": [],
@@ -234,6 +249,7 @@
     "ResponsiveBrowserWidth": 768,
     "ResponsiveBrowserHeight": 1024,
     "ResponsiveBrowserUserAgent": "Mozilla/5.0 (iPad; CPU OS 11_0 like Mac OS X) AppleWebKit/604.1.34 (KHTML, like Gecko) Version/11.0 Mobile/15A5341f Safari/604.1",
-    "ActiveTheme": "Light"
+    "ActiveTheme": "Light",
+    "ShowStepResultDetails": false
   }
 }

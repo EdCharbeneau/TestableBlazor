@@ -1,0 +1,1251 @@
+{
+  "__type": "ArtOfTest.WebAii.Design.ProjectModel.Test",
+  "__value": {
+    "DomStatesCounter": {},
+    "AppStartSkip": false,
+    "WebKitExecutionDelay": 0,
+    "ReuseAppWindow": 0,
+    "ProfilerResultsDirectory": null,
+    "ProfilerBenchmarkResultsFilePath": null,
+    "ProfilerBenchmarkResultsId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurationId": "00000000-0000-0000-0000-000000000000",
+    "ProfilerConfigurations": {},
+    "CurrentReferences": [
+      "System",
+      "System.Core",
+      "ArtOfTest.WebAii, Version=2024.1.219.1, Culture=neutral, PublicKeyToken=4fd5f65be123776c",
+      "ArtOfTest.WebAii.Messaging, Version=2024.1.219.1, Culture=neutral, PublicKeyToken=4fd5f65be123776c",
+      "ArtOfTest.WebAii.Design, Version=2024.1.219.1, Culture=neutral, PublicKeyToken=4fc62bbc3827ab1d",
+      "Telerik.WebAii.Controls.Html, Version=2024.1.219.1, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.WebAii.Controls.Xaml, Version=2024.1.219.1, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.WebAii.Controls.Xaml.Wpf, Version=2024.1.219.1, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.TestingFramework.Controls.KendoUI, Version=2024.1.219.1, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.TestingFramework.Controls.KendoUI.Angular, Version=2024.1.219.1, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.TestingFramework.Controls.TelerikUI.Blazor, Version=2024.1.219.1, Culture=neutral, PublicKeyToken=528163f3e645de45",
+      "Telerik.TestStudio.Translators.Common, Version=2024.1.219.1, Culture=neutral, PublicKeyToken=528163f3e645de45"
+    ],
+    "Steps": {
+      "__type": "ArtOfTest.Common.Design.ProjectModel.AutomationStepList",
+      "__value": [
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "5162bc80-0e21-4a3a-b5e8-87532f2b39fe",
+            "Description": "Navigate to : 'https://localhost:7002/'",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.NavigateToActionDescriptor",
+              "__value": {
+                "UseDecodedUrl": true,
+                "NavigateURL": "https://localhost:7002/",
+                "BaseUrl": "",
+                "SearchByImageFirst": 0,
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": false,
+                "UsejQuery": false,
+                "ClosesBrowser": false,
+                "AjaxTimeout": 0,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 1,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "Form Loadl4he4ity.bfi",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "93966ea1-8eaf-487f-917e-13ebe9819bc0",
+            "Description": "Wait for '500' msec.",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.SleepActionDescriptor",
+              "__value": {
+                "WaitTime": 500,
+                "WaitOnElements": true,
+                "WaitOnElementsTimeout": 30000,
+                "UseStepWaitOnElementsTimout": false,
+                "SearchByImageFirst": 0,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 2,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "Form Loadvfw2c2pb.xjm",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "6ce115a7-82e6-4d82-b692-4a7b92246e6b",
+            "Description": "Verify that there are no JS console errors on the current page.",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "ArtOfTest.WebAii.Design.IntrinsicTranslators.Descriptors.JsConsoleErrorsVerificationDescriptor",
+              "__value": {
+                "WaitOnElements": false,
+                "WaitOnElementsTimeout": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "SearchByImageFirst": 0,
+                "ExcludedErrors": "",
+                "DataBindVariableName": null,
+                "Timeout": 30000,
+                "CheckInterval": 500,
+                "EnsureStateIsCurrent": false,
+                "Pause": 0,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {},
+                "StepType": 2,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 3,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "Form Loadnfororu5.2h4",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "9bf623ca-15d2-412d-80b0-d5cc0a69d684",
+            "Description": "TelerikBlazorDateInput: Validate input date and time",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "Telerik.TestStudio.Translators.TelerikUI.Blazor.DateInput.VerificationDescriptors.DateTimeVerificationDescriptor",
+              "__value": {
+                "DateTime": "1980-01-01 12:00:00 AM",
+                "Format": "yyyy-MM-dd hh:mm:ss tt",
+                "IsOrIsNot": 0,
+                "DataBindVariableName": null,
+                "Timeout": 30000,
+                "CheckInterval": 500,
+                "EnsureStateIsCurrent": false,
+                "Pause": 0,
+                "WaitOnElementsTimeout": 30000,
+                "SearchByImageFirst": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": true,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {
+                  "TelerikBlazorDateInput": {
+                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+                    "__value": {
+                      "Name": "TelerikBlazorDateInput",
+                      "Region": null,
+                      "Page": {
+                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+                        "__value": {
+                          "Path": "https://localhost:7002/",
+                          "Query": "",
+                          "BaseUrl": "",
+                          "EquivalentUrls": [],
+                          "Fragment": "",
+                          "Title": "",
+                          "CompareMode": 1,
+                          "AlwaysUseTitleInCompare": false,
+                          "FriendlyName": "HttpsLocalhost7002"
+                        }
+                      },
+                      "Frame": null,
+                      "FindExpression": {
+                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
+                        "__value": {
+                          "uniqueKey": "fnB1S1icQizDV6sY3NYBZiAvGY+/TG0vA+COqAG5g6s=",
+                          "NodeKind": 4,
+                          "TechnologyType": 1,
+                          "Name": "BirthDateFieldText",
+                          "FindExpressions": [
+                            {
+                              "Key": 1,
+                              "Value": {
+                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                                "__value": {
+                                  "Clauses": [
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "tagname=span"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "class=~telerik-blazor"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "class=#(?:k-dateinput|k-datepicker|k-datetimepicker|k-timepicker)"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "class=~k-input-inner"
+                                      }
+                                    }
+                                  ],
+                                  "Constraints": [],
+                                  "ChainStops": [
+                                    3
+                                  ]
+                                }
+                              }
+                            }
+                          ],
+                          "BackupSearchClause": "/html[1]/body[1]/div[1]/main[1]/article[1]/form[1]/div[1]/span[1]/input[1]",
+                          "ImageSearchClauses": [
+                            {
+                              "__type": "ArtOfTest.Common.ImageSearchClause",
+                              "__value": {
+                                "Resolution": "2400, 1600",
+                                "BroweserType": 7,
+                                "Image": "4E3560A1934C45B653C8F855C31575CAD6118E01832ED09D6DE26DDAF4A767CC",
+                                "Index": 0,
+                                "MatchThreshold": 90,
+                                "OsVersion": "10.0.22621.0",
+                                "ScreenScale": 1.5,
+                                "ScrollOnImageSearch": null
+                              }
+                            }
+                          ],
+                          "DataBindingExpressions": {}
+                        }
+                      },
+                      "HtmlControlType": "Telerik.TestingFramework.Controls.TelerikUI.Blazor.DateInput.TelerikBlazorDateInput",
+                      "IsIndependent": false,
+                      "DomStateKey": "",
+                      "TechnologyType": 1,
+                      "Version": 200
+                    }
+                  }
+                },
+                "StepType": 2,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 4,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "Form Loadfbxnz3ot.gep",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "deecf674-61f5-4206-a56d-806d8f161686",
+            "Description": "TelerikBlazorTextBox: Verify display text is empty",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "Telerik.TestStudio.Translators.TelerikUI.Blazor.TextBox.VerificationDescriptors.DisplayTextVerificationDescriptor",
+              "__value": {
+                "DisplayText": "",
+                "CompareType": 0,
+                "DataBindVariableName": null,
+                "Timeout": 30000,
+                "CheckInterval": 500,
+                "EnsureStateIsCurrent": false,
+                "Pause": 0,
+                "WaitOnElementsTimeout": 30000,
+                "SearchByImageFirst": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": true,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {
+                  "TelerikBlazorTextBox": {
+                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+                    "__value": {
+                      "Name": "TelerikBlazorTextBox",
+                      "Region": null,
+                      "Page": {
+                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+                        "__value": {
+                          "Path": "https://localhost:7002/",
+                          "Query": "",
+                          "BaseUrl": "",
+                          "EquivalentUrls": [],
+                          "Fragment": "",
+                          "Title": "",
+                          "CompareMode": 1,
+                          "AlwaysUseTitleInCompare": false,
+                          "FriendlyName": "HttpsLocalhost7002"
+                        }
+                      },
+                      "Frame": null,
+                      "FindExpression": {
+                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
+                        "__value": {
+                          "uniqueKey": "Xcw7oyBa94hCpwOxYGVsjokDY0HGgSSDk9JzXiuiGFM=",
+                          "NodeKind": 4,
+                          "TechnologyType": 1,
+                          "Name": "Span",
+                          "FindExpressions": [
+                            {
+                              "Key": 1,
+                              "Value": {
+                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                                "__value": {
+                                  "Clauses": [
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "class=~k-textbox"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "class=~telerik-blazor"
+                                      }
+                                    }
+                                  ],
+                                  "Constraints": [],
+                                  "ChainStops": []
+                                }
+                              }
+                            }
+                          ],
+                          "BackupSearchClause": "/html[1]/body[1]/div[1]/main[1]/article[1]/form[1]/div[2]/span[1]",
+                          "ImageSearchClauses": [
+                            {
+                              "__type": "ArtOfTest.Common.ImageSearchClause",
+                              "__value": {
+                                "Resolution": "2400, 1600",
+                                "BroweserType": 7,
+                                "Image": "D7BA870298A004E7F048B1997ADC7B98AAC3EDF2AE85C9B43C4150F0F6511964",
+                                "Index": 1,
+                                "MatchThreshold": 90,
+                                "OsVersion": "10.0.22621.0",
+                                "ScreenScale": 1.5,
+                                "ScrollOnImageSearch": null
+                              }
+                            }
+                          ],
+                          "DataBindingExpressions": {}
+                        }
+                      },
+                      "HtmlControlType": "Telerik.TestingFramework.Controls.TelerikUI.Blazor.TextBox.TelerikBlazorTextBox",
+                      "IsIndependent": false,
+                      "DomStateKey": "",
+                      "TechnologyType": 1,
+                      "Version": 200
+                    }
+                  }
+                },
+                "StepType": 2,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 5,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "Form Loadsnkaiard.j0w",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "552d6488-1e32-426d-afeb-5508fcbb918c",
+            "Description": "TelerikBlazorTextBox: Verify display text is empty",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "Telerik.TestStudio.Translators.TelerikUI.Blazor.TextBox.VerificationDescriptors.DisplayTextVerificationDescriptor",
+              "__value": {
+                "DisplayText": "",
+                "CompareType": 0,
+                "DataBindVariableName": null,
+                "Timeout": 30000,
+                "CheckInterval": 500,
+                "EnsureStateIsCurrent": false,
+                "Pause": 0,
+                "WaitOnElementsTimeout": 30000,
+                "SearchByImageFirst": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": true,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {
+                  "TelerikBlazorTextBox": {
+                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+                    "__value": {
+                      "Name": "TelerikBlazorTextBox",
+                      "Region": null,
+                      "Page": {
+                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+                        "__value": {
+                          "Path": "https://localhost:7002/",
+                          "Query": "",
+                          "BaseUrl": "",
+                          "EquivalentUrls": [],
+                          "Fragment": "",
+                          "Title": "",
+                          "CompareMode": 1,
+                          "AlwaysUseTitleInCompare": false,
+                          "FriendlyName": "HttpsLocalhost7002"
+                        }
+                      },
+                      "Frame": null,
+                      "FindExpression": {
+                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
+                        "__value": {
+                          "uniqueKey": "ZRESqdNtyT4phahHbAagVynRdt+yf8JhnBjZui5daPM=",
+                          "NodeKind": 4,
+                          "TechnologyType": 1,
+                          "Name": "Span0",
+                          "FindExpressions": [
+                            {
+                              "Key": 1,
+                              "Value": {
+                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                                "__value": {
+                                  "Clauses": [
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "class=~k-textbox"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "class=~telerik-blazor"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "GroupIndex=1"
+                                      }
+                                    }
+                                  ],
+                                  "Constraints": [],
+                                  "ChainStops": []
+                                }
+                              }
+                            }
+                          ],
+                          "BackupSearchClause": "/html[1]/body[1]/div[1]/main[1]/article[1]/form[1]/div[3]/span[1]",
+                          "ImageSearchClauses": [
+                            {
+                              "__type": "ArtOfTest.Common.ImageSearchClause",
+                              "__value": {
+                                "Resolution": "2400, 1600",
+                                "BroweserType": 7,
+                                "Image": "06E5CD5F3F4CB68F4A7D4BC81C0DBDFAF651BD40A4159EA1A197343C95A71D78",
+                                "Index": 2,
+                                "MatchThreshold": 90,
+                                "OsVersion": "10.0.22621.0",
+                                "ScreenScale": 1.5,
+                                "ScrollOnImageSearch": null
+                              }
+                            }
+                          ],
+                          "DataBindingExpressions": {}
+                        }
+                      },
+                      "HtmlControlType": "Telerik.TestingFramework.Controls.TelerikUI.Blazor.TextBox.TelerikBlazorTextBox",
+                      "IsIndependent": false,
+                      "DomStateKey": "",
+                      "TechnologyType": 1,
+                      "Version": 200
+                    }
+                  }
+                },
+                "StepType": 2,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 6,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "Form Loadhfgwojvm.0f2",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "333c2958-e8f2-46d7-b3db-0a3fe30fb943",
+            "Description": "TelerikBlazorDropdownList: TelerikBlazorDropdownList selected item text 'Exact' 'AE'.",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "Telerik.TestStudio.Translators.TelerikUI.Blazor.DropdownList.VerificationDescriptors.SelectedItemTextVerificationDescriptor",
+              "__value": {
+                "SelectedItemText": "AE",
+                "CompareType": 0,
+                "DataBindVariableName": null,
+                "Timeout": 30000,
+                "CheckInterval": 500,
+                "EnsureStateIsCurrent": false,
+                "Pause": 0,
+                "WaitOnElementsTimeout": 30000,
+                "SearchByImageFirst": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": true,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {
+                  "TelerikBlazorDropdownList": {
+                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+                    "__value": {
+                      "Name": "TelerikBlazorDropdownList",
+                      "Region": null,
+                      "Page": {
+                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+                        "__value": {
+                          "Path": "https://localhost:7002/",
+                          "Query": "",
+                          "BaseUrl": "",
+                          "EquivalentUrls": [],
+                          "Fragment": "",
+                          "Title": "",
+                          "CompareMode": 1,
+                          "AlwaysUseTitleInCompare": false,
+                          "FriendlyName": "HttpsLocalhost7002"
+                        }
+                      },
+                      "Frame": null,
+                      "FindExpression": {
+                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
+                        "__value": {
+                          "uniqueKey": "4X+QO9A8YZv6qqY8jLwJFAzbflS7Pw1G+R1MSg52y30=",
+                          "NodeKind": 4,
+                          "TechnologyType": 1,
+                          "Name": "RegionSelectSpan",
+                          "FindExpressions": [
+                            {
+                              "Key": 1,
+                              "Value": {
+                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                                "__value": {
+                                  "Clauses": [
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "class=~k-dropdown"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "class=~telerik-blazor"
+                                      }
+                                    }
+                                  ],
+                                  "Constraints": [],
+                                  "ChainStops": []
+                                }
+                              }
+                            }
+                          ],
+                          "BackupSearchClause": "/html[1]/body[1]/div[1]/main[1]/article[1]/form[1]/div[5]/span[1]",
+                          "ImageSearchClauses": [
+                            {
+                              "__type": "ArtOfTest.Common.ImageSearchClause",
+                              "__value": {
+                                "Resolution": "2400, 1600",
+                                "BroweserType": 7,
+                                "Image": "EA92FF714FA4DFF53C61113E63943E8704F1E09A7C17DAEAC9209DDBAE500218",
+                                "Index": 1,
+                                "MatchThreshold": 90,
+                                "OsVersion": "10.0.22621.0",
+                                "ScreenScale": 1.5,
+                                "ScrollOnImageSearch": null
+                              }
+                            }
+                          ],
+                          "DataBindingExpressions": {}
+                        }
+                      },
+                      "HtmlControlType": "Telerik.TestingFramework.Controls.TelerikUI.Blazor.DropdownList.TelerikBlazorDropdownList",
+                      "IsIndependent": false,
+                      "DomStateKey": "",
+                      "TechnologyType": 1,
+                      "Version": 200
+                    }
+                  }
+                },
+                "StepType": 2,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 7,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "Form Loadrjhhrbyx.jh3",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "c80dd02f-fc9f-4f80-aea7-a6d019cbc43e",
+            "Description": "TelerikBlazorDropdownList: TelerikBlazorDropdownList selected item text 'Exact' 'Red AE'.",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "Telerik.TestStudio.Translators.TelerikUI.Blazor.DropdownList.VerificationDescriptors.SelectedItemTextVerificationDescriptor",
+              "__value": {
+                "SelectedItemText": "Red AE",
+                "CompareType": 0,
+                "DataBindVariableName": null,
+                "Timeout": 30000,
+                "CheckInterval": 500,
+                "EnsureStateIsCurrent": false,
+                "Pause": 0,
+                "WaitOnElementsTimeout": 30000,
+                "SearchByImageFirst": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": true,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {
+                  "TelerikBlazorDropdownList": {
+                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+                    "__value": {
+                      "Name": "TelerikBlazorDropdownList",
+                      "Region": null,
+                      "Page": {
+                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+                        "__value": {
+                          "Path": "https://localhost:7002/",
+                          "Query": "",
+                          "BaseUrl": "",
+                          "EquivalentUrls": [],
+                          "Fragment": "",
+                          "Title": "",
+                          "CompareMode": 1,
+                          "AlwaysUseTitleInCompare": false,
+                          "FriendlyName": "HttpsLocalhost7002"
+                        }
+                      },
+                      "Frame": null,
+                      "FindExpression": {
+                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
+                        "__value": {
+                          "uniqueKey": "9an8+pTO+1sfg3hW5VatQ6xd1JAJCitboDYt/RkWqBY=",
+                          "NodeKind": 4,
+                          "TechnologyType": 1,
+                          "Name": "TeamSelectSpan",
+                          "FindExpressions": [
+                            {
+                              "Key": 1,
+                              "Value": {
+                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                                "__value": {
+                                  "Clauses": [
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "class=~k-dropdown"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "class=~telerik-blazor"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "GroupIndex=1"
+                                      }
+                                    }
+                                  ],
+                                  "Constraints": [],
+                                  "ChainStops": []
+                                }
+                              }
+                            }
+                          ],
+                          "BackupSearchClause": "/html[1]/body[1]/div[1]/main[1]/article[1]/form[1]/div[6]/span[1]",
+                          "ImageSearchClauses": [
+                            {
+                              "__type": "ArtOfTest.Common.ImageSearchClause",
+                              "__value": {
+                                "Resolution": "2400, 1600",
+                                "BroweserType": 7,
+                                "Image": "75A30F8D77256B1AECCFEC9656ACF0C15E4DCC90D704779FD39664FFD6782E1C",
+                                "Index": 10,
+                                "MatchThreshold": 90,
+                                "OsVersion": "10.0.22621.0",
+                                "ScreenScale": 1.5,
+                                "ScrollOnImageSearch": null
+                              }
+                            }
+                          ],
+                          "DataBindingExpressions": {}
+                        }
+                      },
+                      "HtmlControlType": "Telerik.TestingFramework.Controls.TelerikUI.Blazor.DropdownList.TelerikBlazorDropdownList",
+                      "IsIndependent": false,
+                      "DomStateKey": "",
+                      "TechnologyType": 1,
+                      "Version": 200
+                    }
+                  }
+                },
+                "StepType": 2,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 8,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "Form Loadrn0swj45.o2w",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "6f01626e-f001-4cd4-89af-81ce7efa1d1a",
+            "Description": "TelerikBlazorButton Click",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "Telerik.TestStudio.Translators.TelerikUI.Blazor.Button.ActionDescriptors.ClickActionDescriptor",
+              "__value": {
+                "SimulateRealClick": true,
+                "UsejQuery": false,
+                "ClosesBrowser": false,
+                "AjaxTimeout": 0,
+                "Pause": 0,
+                "WaitOnElementsTimeout": 30000,
+                "SearchByImageFirst": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": true,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {
+                  "TelerikBlazorButton": {
+                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+                    "__value": {
+                      "Name": "TelerikBlazorButton",
+                      "Region": null,
+                      "Page": {
+                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+                        "__value": {
+                          "Path": "https://localhost:7002/",
+                          "Query": "",
+                          "BaseUrl": "",
+                          "EquivalentUrls": [],
+                          "Fragment": "",
+                          "Title": "",
+                          "CompareMode": 1,
+                          "AlwaysUseTitleInCompare": false,
+                          "FriendlyName": "HttpsLocalhost7002"
+                        }
+                      },
+                      "Frame": null,
+                      "FindExpression": {
+                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
+                        "__value": {
+                          "uniqueKey": "h3o+eWGCXPMNSQ2Fv7VOJeRzGO5/21B3uiI0GoMmDDY=",
+                          "NodeKind": 4,
+                          "TechnologyType": 1,
+                          "Name": "FormSubmitButtonTag",
+                          "FindExpressions": [
+                            {
+                              "Key": 1,
+                              "Value": {
+                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                                "__value": {
+                                  "Clauses": [
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "tagname=button"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "class=~k-button"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "class=~telerik-blazor"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "GroupIndex=3"
+                                      }
+                                    }
+                                  ],
+                                  "Constraints": [],
+                                  "ChainStops": []
+                                }
+                              }
+                            }
+                          ],
+                          "BackupSearchClause": "/html[1]/body[1]/div[1]/main[1]/article[1]/form[1]/button[1]",
+                          "ImageSearchClauses": [
+                            {
+                              "__type": "ArtOfTest.Common.ImageSearchClause",
+                              "__value": {
+                                "Resolution": "2400, 1600",
+                                "BroweserType": 7,
+                                "Image": "B30F3E84703E90052853AAB72FC55CF5F007AB7D5427E8C0F9D4B50B5C96E15C",
+                                "Index": 0,
+                                "MatchThreshold": 90,
+                                "OsVersion": "10.0.22621.0",
+                                "ScreenScale": 1.5,
+                                "ScrollOnImageSearch": null
+                              }
+                            }
+                          ],
+                          "DataBindingExpressions": {}
+                        }
+                      },
+                      "HtmlControlType": "Telerik.TestingFramework.Controls.TelerikUI.Blazor.Button.TelerikBlazorButton",
+                      "IsIndependent": false,
+                      "DomStateKey": "",
+                      "TechnologyType": 1,
+                      "Version": 200
+                    }
+                  }
+                },
+                "StepType": 4,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 9,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "Form Loadtt01hp1l.o3j",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "e3864c94-d70b-412d-8067-e99f077c4099",
+            "Description": "Verify element 'Div' 'is' visible.",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "Telerik.TestStudio.Translators.TelerikUI.Blazor.CommonVerificationDescriptors.TelerikBlazorVisibleVerificationDescriptor",
+              "__value": {
+                "IsVisible": true,
+                "DataBindVariableName": null,
+                "Timeout": 30000,
+                "CheckInterval": 500,
+                "EnsureStateIsCurrent": false,
+                "Pause": 0,
+                "WaitOnElementsTimeout": 30000,
+                "SearchByImageFirst": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": true,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {
+                  "verifyTarget": {
+                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+                    "__value": {
+                      "Name": "verifyTarget",
+                      "Region": null,
+                      "Page": {
+                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+                        "__value": {
+                          "Path": "https://localhost:7002/",
+                          "Query": "",
+                          "BaseUrl": "",
+                          "EquivalentUrls": [],
+                          "Fragment": "",
+                          "Title": "",
+                          "CompareMode": 1,
+                          "AlwaysUseTitleInCompare": false,
+                          "FriendlyName": "HttpsLocalhost7002"
+                        }
+                      },
+                      "Frame": null,
+                      "FindExpression": {
+                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
+                        "__value": {
+                          "uniqueKey": "njXMfYHqEEK9oaK64i6O0KM026o3OxTBc24NLRZbe4M=",
+                          "NodeKind": 4,
+                          "TechnologyType": 1,
+                          "Name": "Div",
+                          "FindExpressions": [
+                            {
+                              "Key": 1,
+                              "Value": {
+                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                                "__value": {
+                                  "Clauses": [
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "class=~k-window"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "class=~telerik-blazor"
+                                      }
+                                    }
+                                  ],
+                                  "Constraints": [],
+                                  "ChainStops": []
+                                }
+                              }
+                            }
+                          ],
+                          "BackupSearchClause": "/html[1]/body[1]/div[3]/div[2]",
+                          "ImageSearchClauses": [
+                            {
+                              "__type": "ArtOfTest.Common.ImageSearchClause",
+                              "__value": {
+                                "Resolution": "2400, 1600",
+                                "BroweserType": 7,
+                                "Image": "1B852639DEBA12A9652328972302DE8DAA46ACBA2609D0422AD5A1B792B96078",
+                                "Index": 1,
+                                "MatchThreshold": 90,
+                                "OsVersion": "10.0.22621.0",
+                                "ScreenScale": 1.5,
+                                "ScrollOnImageSearch": null
+                              }
+                            }
+                          ],
+                          "DataBindingExpressions": {}
+                        }
+                      },
+                      "HtmlControlType": "Telerik.TestingFramework.Controls.TelerikUI.Blazor.Window.TelerikBlazorWindow",
+                      "IsIndependent": false,
+                      "DomStateKey": "",
+                      "TechnologyType": 1,
+                      "Version": 200
+                    }
+                  }
+                },
+                "StepType": 2,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 10,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "Form Loadagt0h0qz.htt",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        },
+        {
+          "__type": "ArtOfTest.WebAii.Design.ProjectModel.AutomationStep",
+          "__value": {
+            "Runtime ID": "5e7e5df2-4984-4c17-8487-625ca416f7e3",
+            "Description": "TelerikBlazorWindow: TelerikBlazorWindow title 'Exact' 'Thank You'.",
+            "CustomDescription": null,
+            "Step": {
+              "__type": "Telerik.TestStudio.Translators.TelerikUI.Blazor.Window.VerificationDescriptor.TitleVerificationDescriptor",
+              "__value": {
+                "Title": "Thank You",
+                "CompareType": 0,
+                "DataBindVariableName": null,
+                "Timeout": 30000,
+                "CheckInterval": 500,
+                "EnsureStateIsCurrent": false,
+                "Pause": 0,
+                "WaitOnElementsTimeout": 30000,
+                "SearchByImageFirst": 0,
+                "UseStepWaitOnElementsTimout": false,
+                "WaitOnElements": true,
+                "RunsAgainstVersion": "",
+                "Constraints": {
+                  "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.DescriptorConstraints",
+                  "__value": {
+                    "ConstraintValues": {}
+                  }
+                },
+                "Elements": {
+                  "TelerikBlazorWindow": {
+                    "__type": "ArtOfTest.Common.Design.Extensibility.Descriptors.ElementDescriptor",
+                    "__value": {
+                      "Name": "TelerikBlazorWindow",
+                      "Region": null,
+                      "Page": {
+                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.PageUri",
+                        "__value": {
+                          "Path": "https://localhost:7002/",
+                          "Query": "",
+                          "BaseUrl": "",
+                          "EquivalentUrls": [],
+                          "Fragment": "",
+                          "Title": "",
+                          "CompareMode": 1,
+                          "AlwaysUseTitleInCompare": false,
+                          "FriendlyName": "HttpsLocalhost7002"
+                        }
+                      },
+                      "Frame": null,
+                      "FindExpression": {
+                        "__type": "ArtOfTest.WebAii.Design.ProjectModel.HtmlFindExpressionElement",
+                        "__value": {
+                          "uniqueKey": "njXMfYHqEEK9oaK64i6O0KM026o3OxTBc24NLRZbe4M=",
+                          "NodeKind": 4,
+                          "TechnologyType": 1,
+                          "Name": "Div",
+                          "FindExpressions": [
+                            {
+                              "Key": 1,
+                              "Value": {
+                                "__type": "ArtOfTest.WebAii.Core.HtmlFindExpression",
+                                "__value": {
+                                  "Clauses": [
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "class=~k-window"
+                                      }
+                                    },
+                                    {
+                                      "__type": "ArtOfTest.WebAii.Core.HtmlFindClause",
+                                      "__value": {
+                                        "Clause": "class=~telerik-blazor"
+                                      }
+                                    }
+                                  ],
+                                  "Constraints": [],
+                                  "ChainStops": []
+                                }
+                              }
+                            }
+                          ],
+                          "BackupSearchClause": "/html[1]/body[1]/div[3]/div[2]",
+                          "ImageSearchClauses": [
+                            {
+                              "__type": "ArtOfTest.Common.ImageSearchClause",
+                              "__value": {
+                                "Resolution": "2400, 1600",
+                                "BroweserType": 7,
+                                "Image": "1B852639DEBA12A9652328972302DE8DAA46ACBA2609D0422AD5A1B792B96078",
+                                "Index": 1,
+                                "MatchThreshold": 90,
+                                "OsVersion": "10.0.22621.0",
+                                "ScreenScale": 1.5,
+                                "ScrollOnImageSearch": null
+                              }
+                            }
+                          ],
+                          "DataBindingExpressions": {}
+                        }
+                      },
+                      "HtmlControlType": "Telerik.TestingFramework.Controls.TelerikUI.Blazor.Window.TelerikBlazorWindow",
+                      "IsIndependent": false,
+                      "DomStateKey": "",
+                      "TechnologyType": 1,
+                      "Version": 200
+                    }
+                  }
+                },
+                "StepType": 2,
+                "LogMessageOnFailure": "",
+                "EditorType": "",
+                "DataBindingExpressions": {}
+              }
+            },
+            "Enabled": true,
+            "Order": 11,
+            "Id": "",
+            "StepState": 0,
+            "ContinueOnFailure": false,
+            "StepImageKey": "Form Loaddrbkwogs.dlc",
+            "QcId": 0,
+            "QcVersionStamp": 0,
+            "Version": 200
+          }
+        }
+      ]
+    },
+    "IndependentDescriptors": [],
+    "HtmlDescription": "",
+    "SilverlightEnabled": false,
+    "IsSilverlightApp": false,
+    "SilverlightAppWebUrl": "",
+    "SilverlightAppLocalDirectory": "",
+    "SilverlightAppRecordLocal": false,
+    "SilverlightAppOriginUri": null,
+    "WpfAppPath": null,
+    "AppStartArgs": null,
+    "UseDefaultWpfAppPath": false,
+    "DesktopAppPath": null,
+    "UseDefaultDesktopAppPath": false,
+    "TestAssembly": "TestableBlazor.e2e.dll",
+    "TestAssemblyPath": "bin",
+    "TestClass": "",
+    "ResourceFilePath": "Form Load.resx",
+    "ElementImageStoreFilePath": "Form Load.imgstore",
+    "HasCodeBehind": false,
+    "DataInfo": {
+      "__type": "ArtOfTest.Common.Design.Data.DataInfo",
+      "__value": {
+        "ConnectionString": "",
+        "DefaultToGrid": true,
+        "DataRange": "",
+        "LoadRecordsCount": null,
+        "DataTableName": "",
+        "DataProvider": "",
+        "DataEnabled": true,
+        "HasBuiltinGrid": false,
+        "DataType": 4,
+        "BuiltInData": null,
+        "BuiltInDocumentKey": null,
+        "TSQL": ""
+      }
+    },
+    "VSProperties": {},
+    "DeploymentItems": [],
+    "IsTestFragment": false,
+    "StopTestListOnFailure": false,
+    "InheritParentDataSource": false,
+    "BrowserType": 0,
+    "TestLinks": [],
+    "Description": "",
+    "Name": "Form Load",
+    "Owner": "",
+    "Path": "Form Load.tstest",
+    "Priority": 0,
+    "TestType": 0,
+    "UniqueId": "a53ddbfe-7984-4858-a23c-7839d676aece",
+    "Id": "a53ddbfe-7984-4858-a23c-7839d676aece",
+    "ProjectId": "73b59053-d561-4dd4-a758-59d028d9c592",
+    "Version": 210
+  }
+}

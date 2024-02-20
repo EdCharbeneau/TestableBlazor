@@ -3,9 +3,9 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Threading.Tasks;
 using Telerik.Blazor.Components;
 using Telerik.JustMock;
-using TestableBlazor.Net5.Client;
-using TestableBlazor.Net5.Client.Pages;
-using TestableBlazor.Net5.Client.Services;
+using TestableBlazor.Client;
+using TestableBlazor.Client.Pages;
+using TestableBlazor.Client.Services;
 using Xunit;
 
 
@@ -55,7 +55,7 @@ namespace TestableBlazor.IntegrationTests
         public void RegionChangeLoadsTeams()
         {
             // Arrange
-            var cut = RenderComponent<Index>();
+            var cut = RenderComponent<Home>();
 
             // Act
             var ddl = cut.FindComponent<TelerikDropDownList<string, string>>();
@@ -75,7 +75,7 @@ namespace TestableBlazor.IntegrationTests
             // Render the index page
             // Component internally calls IDataService.GetRegions()
             //  and IDataService.GetTeamsByRegion()
-            var cut = RenderComponent<Index>();
+            var cut = RenderComponent<Home>();
 
             // Get the Model property from the component Instance
             var cutModel = cut.Instance.Model;
@@ -97,7 +97,7 @@ namespace TestableBlazor.IntegrationTests
         async Task SettingRegionSelectsFirstTeam()
         {
             // Arrange
-            var cut = RenderComponent<Index>();
+            var cut = RenderComponent<Home>();
 
             // Act
             await cut.Instance.SelectedRegionChanged("BB");

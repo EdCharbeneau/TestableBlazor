@@ -3,7 +3,7 @@ using System.Linq;
 using TestableBlazor.Shared;
 using Xunit;
 
-namespace TestableBlazor.UnitTests
+namespace TestableBlazor.UnitTests.Net5
 {
     public class EmailValidatorTests
     {

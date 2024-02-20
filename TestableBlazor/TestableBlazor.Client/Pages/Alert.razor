@@ -1,0 +1,40 @@
+﻿@if (!IsHidden)
+{
+    @*<div class="alert @CssAlert">*@
+    <div class="alert @CssAlert">
+        @ChildContent
+        <button @onclick="Hide" type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+else
+{
+    <button @onclick="Show" type="button" aria-label="Open">
+        <span aria-hidden="true">✉️</span>
+    </button>
+}
+
+@code {
+
+    void Hide()
+    {
+        // Logical error
+        IsHidden = true;
+    }
+
+    void Show()
+    {
+        IsHidden = false;
+    }
+
+    bool IsHidden = false;
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public bool IsInfo { get; set; }
+
+    string CssAlert => IsInfo ? "alert-info" : "alert-danger";
+}

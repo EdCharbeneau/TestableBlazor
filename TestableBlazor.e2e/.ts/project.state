@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfOpenItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <OpenItem>
-    <OpenItemType>CodeFile</OpenItemType>
-    <Path>C:\Users\edcha\source\repos\TestableBlazor\TestableBlazor.e2e\WebTest1.tstest.cs</Path>
-  </OpenItem>
-  <OpenItem>
     <OpenItemType>TestFile</OpenItemType>
-    <Path>C:\Users\edcha\source\repos\TestableBlazor\TestableBlazor.e2e\WebTest1.tstest</Path>
+    <Path>C:\Users\echarben\source\repos\Vegas\TestableBlazor.e2e\Form Load.tstest</Path>
   </OpenItem>
 </ArrayOfOpenItem>

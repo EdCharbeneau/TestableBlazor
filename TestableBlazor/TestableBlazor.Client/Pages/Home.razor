@@ -1,0 +1,87 @@
+﻿@page "/"
+@inject IDataService DataService
+
+<Alert IsInfo="true">I'm dismiss-able!</Alert>
+
+<EditForm Model="Model" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="form-group">
+        <label for="birthDateField">Birth Date</label>
+        <TelerikDatePicker Id="birthDateField" @bind-Value="Model.BirthDate" Class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="firstNameField">First Name</label>
+        <TelerikTextBox Id="firstNameField" @bind-Value="Model.FirstName" Class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="lastNameField">Last Name</label>
+        <TelerikTextBox Id="lastNameField" @bind-Value="Model.LastName" Class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="emailField">Email</label>
+        <TelerikTextBox Id="emailField" PlaceHolder="email@domain.com" @bind-Value="Model.Email" Class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="regionSelect">Region</label>
+        <TelerikDropDownList Value="Model.SelectedRegion"
+                             ValueChanged="@((string s) => SelectedRegionChanged(s))"
+                             ValueExpression="@(() => Model.SelectedRegion)"
+                             Data="Model.Regions"
+                             Id="regionSelect"
+                             Class="form-control"
+                             Width="100%" />
+    </div>
+    <div class="form-group">
+        <label for="teamSelect">Team</label>
+        <TelerikDropDownList @bind-Value="Model.SelectedTeam"
+                             Data="Model.Teams"
+                             Id="teamSelect"
+                             Class="form-control"
+                             Width="100%" />
+    </div>
+    <TelerikButton Id="formSubmit" ThemeColor="@(ThemeConstants.Button.ThemeColor.Primary)">Submit</TelerikButton>
+    <TelerikButton Id="formReset" ButtonType="ButtonType.Reset">Cancel</TelerikButton>
+</EditForm>
+<TelerikWindow Visible="isComplete" Modal="true">
+    <WindowActions>
+        <WindowAction Name="Close" OnClick="OnWindowClose"></WindowAction>
+    </WindowActions>
+    <WindowTitle>Thank You</WindowTitle>
+    <WindowContent>
+        <p>Thank you, we have received your information and will contact you using the email provided.</p>
+    </WindowContent>
+</TelerikWindow>
+
+@code {
+
+    [Parameter]
+    public UserFormViewModel Model { get; set; } = new UserFormViewModel();
+
+    bool isComplete;
+
+    void OnWindowClose()
+    {
+        isComplete = false;
+    }
+
+    void HandleValidSubmit()
+    {
+        // Do HTTP
+        isComplete = true;
+    }
+
+    public async Task SelectedRegionChanged(string value)
+    {
+        Model.SelectedRegion = value; // 1
+        Model.Teams = await DataService.GetTeamsByRegion(Model.SelectedRegion); // 2
+        Model.SelectedTeam = Model.Teams[0]; // 3
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        // init here
+        Model.Regions = await DataService.GetRegions(); // 1
+        await SelectedRegionChanged(Model.Regions[0]);  // 1
+    }
+}

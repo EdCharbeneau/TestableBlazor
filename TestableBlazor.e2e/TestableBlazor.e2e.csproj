@@ -5,7 +5,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{06722827-2882-4E82-807A-C695B6D101CC}</ProjectGuid>
+    <ProjectGuid>{490453F1-5184-4D7A-9D0D-A22E97DAF009}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TestableBlazor.e2e</RootNamespace>
@@ -35,10 +35,10 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="ArtOfTest.WebAii">
-      <RequiredTargetFramework>4.5</RequiredTargetFramework>
+      <RequiredTargetFramework>4.7.2</RequiredTargetFramework>
     </Reference>
     <Reference Include="ArtOfTest.WebAii.Design">
-      <RequiredTargetFramework>4.5</RequiredTargetFramework>
+      <RequiredTargetFramework>4.7.2</RequiredTargetFramework>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System.Windows.Forms" />
@@ -48,9 +48,6 @@
     <Reference Include="Telerik.TestingFramework.Controls.KendoUI.Angular" />
     <Reference Include="Telerik.TestingFramework.Controls.TelerikUI.Blazor" />
     <Reference Include="Telerik.TestStudio.Translators.Common" />
-    <Reference Include="Telerik.WebAii.Controls.Xaml.Wpf, Version=2020.2.910.0, Culture=neutral, PublicKeyToken=528163f3e645de45, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
@@ -59,10 +56,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebTest1.tstest.cs">
-      <DependentUpon>WebTest1.tstest</DependentUpon>
-    </Compile>
-    <None Include="Settings.aiis" />
     <None Include="WebTest1.tstest" />
   </ItemGroup>
   <ItemGroup>
@@ -76,7 +69,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\" />
     <Folder Include="TestLists\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -88,9 +80,4 @@
   </Target>
   -->
   <Import Project="$(MSBuildExtensionsPath)\Telerik\WebUITestStudio\Telerik.WebUITestStudio.targets" />
-  <ProjectExtensions>
-    <VisualStudio>
-      <UserProperties Name="TestableBlazor.e2e" />
-    </VisualStudio>
-  </ProjectExtensions>
 </Project>
