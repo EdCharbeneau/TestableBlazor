@@ -1,4 +1,5 @@
 ﻿@inherits LayoutComponentBase
+@inject IRenderModeIndicator RenderModeIndicator
 @layout TelerikLayout
 <div class="page">
     <div class="sidebar">
@@ -14,6 +15,8 @@
             @Body
         </article>
     </main>
+
+        <TelerikLoaderContainer Visible="!RenderModeIndicator.IsWebassemblyReady" Text="Loading Resources"/>
 </div>
 
 <div id="blazor-error-ui">

@@ -3,7 +3,7 @@
 
 <Alert IsInfo="true">I'm dismiss-able!</Alert>
 
-<EditForm Model="Model" OnValidSubmit="HandleValidSubmit">
+<EditForm @ref="FormInstance" Model="Model" OnValidSubmit="HandleValidSubmit" OnInvalidSubmit="HandleInvalidSubmit">
     <DataAnnotationsValidator />
     <ValidationSummary />
     <div class="form-group">
@@ -39,11 +39,10 @@
                              Id="teamSelect"
                              Class="form-control"
                              Width="100%" />
-    </div>
-    <TelerikButton Id="formSubmit" ThemeColor="@(ThemeConstants.Button.ThemeColor.Primary)">Submit</TelerikButton>
-    <TelerikButton Id="formReset" ButtonType="ButtonType.Reset">Cancel</TelerikButton>
+    </div>     <TelerikButton ThemeColor="@(ThemeConstants.Button.ThemeColor.Primary)">Submit</TelerikButton>
+     <TelerikButton ButtonType="ButtonType.Reset">Cancel</TelerikButton>
 </EditForm>
-<TelerikWindow Visible="isComplete" Modal="true">
+ <TelerikWindow Visible="isComplete" Modal="true">
     <WindowActions>
         <WindowAction Name="Close" OnClick="OnWindowClose"></WindowAction>
     </WindowActions>
@@ -51,12 +50,14 @@
     <WindowContent>
         <p>Thank you, we have received your information and will contact you using the email provided.</p>
     </WindowContent>
-</TelerikWindow>
+</TelerikWindow> 
 
 @code {
 
     [Parameter]
     public UserFormViewModel Model { get; set; } = new UserFormViewModel();
+
+    private EditForm? FormInstance { get; set; }
 
     bool isComplete;
 
@@ -69,6 +70,11 @@
     {
         // Do HTTP
         isComplete = true;
+    }
+
+    void HandleInvalidSubmit()
+    {
+        throw new Exception();
     }
 
     public async Task SelectedRegionChanged(string value)

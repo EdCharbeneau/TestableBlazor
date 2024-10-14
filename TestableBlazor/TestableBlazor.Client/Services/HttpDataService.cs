@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Json;
-using System.Threading.Tasks;
+﻿using System.Net.Http.Json;
 
 namespace TestableBlazor.Client.Services
 {
@@ -11,14 +6,16 @@ namespace TestableBlazor.Client.Services
     {
         private readonly HttpClient http;
         public HttpDataService(HttpClient http) => this.http = http;
-        public Task<string[]> GetRegions()
+        public async Task<string[]> GetRegions()
         {
-            return http.GetFromJsonAsync<string[]>("api/values");
+            return await http.GetFromJsonAsync<string[]>("api/values") ??
+                throw new InvalidOperationException("This web api does not return nulls");
         }
 
-        public Task<string[]> GetTeamsByRegion(string region)
+        public async Task<string[]> GetTeamsByRegion(string region)
         {
-            return http.GetFromJsonAsync<string[]>($"api/values/{region}");
+            return await http.GetFromJsonAsync<string[]>($"api/values/{region}") ??
+                throw new InvalidOperationException("This web api does not return nulls");
         }
     }
 

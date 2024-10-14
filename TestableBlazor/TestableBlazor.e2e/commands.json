@@ -1,0 +1,19 @@
+{
+  "commands": {
+    "playwright:codegen": {
+      "fileName": "pwsh",
+      "workingDirectory": ".",
+      "arguments": "bin\\Debug\\net8.0\\playwright.ps1 codegen https://localhost:7002"
+    },
+    "playwright:install": {
+      "fileName": "pwsh",
+      "workingDirectory": ".",
+      "arguments": "bin\\Debug\\net8.0\\playwright.ps1 install"
+    },
+    "playwright:viewtrace": {
+      "fileName": "pwsh",
+      "workingDirectory": ".",
+      "arguments": "bin\\Debug\\net8.0\\playwright.ps1 show-trace TestableBlazor.e2e.HomePageForm.HomePageHasFormWithInputAndSubmitButton.zip"
+    }
+  }
+}

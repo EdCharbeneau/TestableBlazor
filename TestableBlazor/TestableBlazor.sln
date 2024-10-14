@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestableBlazor.IntegrationT
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9B1C1EC2-4102-4451-B0CF-967BE8613207}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestableBlazor.e2e", "TestableBlazor.e2e\TestableBlazor.e2e.csproj", "{5D193E7B-20F2-4BFA-A5AB-D16DA5E70854}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{6B939C39-0A82-4CB3-BD6C-0C5FEB97222E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B939C39-0A82-4CB3-BD6C-0C5FEB97222E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B939C39-0A82-4CB3-BD6C-0C5FEB97222E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D193E7B-20F2-4BFA-A5AB-D16DA5E70854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D193E7B-20F2-4BFA-A5AB-D16DA5E70854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D193E7B-20F2-4BFA-A5AB-D16DA5E70854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D193E7B-20F2-4BFA-A5AB-D16DA5E70854}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{7DF1058E-5DBE-4ADA-B0D0-04A72A57EFCD} = {9B1C1EC2-4102-4451-B0CF-967BE8613207}
 		{6B939C39-0A82-4CB3-BD6C-0C5FEB97222E} = {9B1C1EC2-4102-4451-B0CF-967BE8613207}
+		{5D193E7B-20F2-4BFA-A5AB-D16DA5E70854} = {9B1C1EC2-4102-4451-B0CF-967BE8613207}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3F531566-1C71-4753-875B-C00E25381F5C}

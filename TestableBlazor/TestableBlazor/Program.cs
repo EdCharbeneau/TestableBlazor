@@ -11,6 +11,8 @@ builder.Services.AddRazorComponents()
 builder.Services.AddControllers();
 builder.Services.AddTelerikBlazor();
 builder.Services.AddScoped<IDataService, DataService>();
+builder.Services.AddScoped<IRenderModeIndicator, ServerRenderModeIndicator>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -1,0 +1,14 @@
+{
+  "commands": {
+    "playwright": {
+      "fileName": "pwsh",
+      "workingDirectory": ".",
+      "arguments": "TestableBlazor.e2e\\bin\\Debug\\net8.0\\playwright.ps1 codegen https://localhost:7002"
+    },
+    "playwright:install": {
+      "fileName": "pwsh",
+      "workingDirectory": ".",
+      "arguments": "TestableBlazor.e2e\\bin\\Debug\\net8.0\\playwright.ps1 install"
+    }
+  }
+}
