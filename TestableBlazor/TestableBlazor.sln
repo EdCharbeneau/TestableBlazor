@@ -3,17 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34601.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestableBlazor", "TestableBlazor\TestableBlazor.csproj", "{644DD40E-2C68-4392-9868-64BB68B291DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestableBlazor", "TestableBlazor\TestableBlazor.csproj", "{644DD40E-2C68-4392-9868-64BB68B291DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestableBlazor.Client", "TestableBlazor.Client\TestableBlazor.Client.csproj", "{6C18E31E-7862-4D41-AB66-9049EA6153F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestableBlazor.Client", "TestableBlazor.Client\TestableBlazor.Client.csproj", "{6C18E31E-7862-4D41-AB66-9049EA6153F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestableBlazor.Shared", "..\TestableBlazor.Shared\TestableBlazor.Shared.csproj", "{7AB1E44A-8EA0-4A8D-8B62-7FC2102EDC4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestableBlazor.Shared", "..\TestableBlazor.Shared\TestableBlazor.Shared.csproj", "{7AB1E44A-8EA0-4A8D-8B62-7FC2102EDC4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestableBlazor.UnitTests", "..\TestableBlazor.UnitTests\TestableBlazor.UnitTests.csproj", "{7DF1058E-5DBE-4ADA-B0D0-04A72A57EFCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestableBlazor.UnitTests", "..\TestableBlazor.UnitTests\TestableBlazor.UnitTests.csproj", "{7DF1058E-5DBE-4ADA-B0D0-04A72A57EFCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestableBlazor.IntegrationTests", "..\TestableBlazor.IntegrationTests\TestableBlazor.IntegrationTests.csproj", "{6B939C39-0A82-4CB3-BD6C-0C5FEB97222E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestableBlazor.e2e", "..\TestableBlazor.e2e\TestableBlazor.e2e.csproj", "{490453F1-5184-4D7A-9D0D-A22E97DAF009}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestableBlazor.IntegrationTests", "..\TestableBlazor.IntegrationTests\TestableBlazor.IntegrationTests.csproj", "{6B939C39-0A82-4CB3-BD6C-0C5FEB97222E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9B1C1EC2-4102-4451-B0CF-967BE8613207}"
 EndProject
@@ -43,10 +41,6 @@ Global
 		{6B939C39-0A82-4CB3-BD6C-0C5FEB97222E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B939C39-0A82-4CB3-BD6C-0C5FEB97222E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B939C39-0A82-4CB3-BD6C-0C5FEB97222E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{490453F1-5184-4D7A-9D0D-A22E97DAF009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{490453F1-5184-4D7A-9D0D-A22E97DAF009}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{490453F1-5184-4D7A-9D0D-A22E97DAF009}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{490453F1-5184-4D7A-9D0D-A22E97DAF009}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,7 +48,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{7DF1058E-5DBE-4ADA-B0D0-04A72A57EFCD} = {9B1C1EC2-4102-4451-B0CF-967BE8613207}
 		{6B939C39-0A82-4CB3-BD6C-0C5FEB97222E} = {9B1C1EC2-4102-4451-B0CF-967BE8613207}
-		{490453F1-5184-4D7A-9D0D-A22E97DAF009} = {9B1C1EC2-4102-4451-B0CF-967BE8613207}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3F531566-1C71-4753-875B-C00E25381F5C}
