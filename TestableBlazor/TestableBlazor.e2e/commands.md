@@ -46,7 +46,7 @@ dotnet test
 This command initializes the trace file viewer. After running tests a trace file can be viewed with step-by-step snapshots of the test process.
 
 ```shell
-pwsh bin\\Debug\\net8.0\\playwright.ps1 trace show-trace ClasName.TestName.zip
+pwsh bin\\Debug\\net8.0\\playwright.ps1 show-trace ClasName.TestName.zip
 ```
 
 ## Launch Configurations
@@ -66,3 +66,7 @@ dotnet test --settings \\runsettings\\chrome.runsettings
 dotnet test --settings \\runsettings\\firefox.runsettings
 dotnet test --settings \\runsettings\\webkit.runsettings
 ```
+
+## Running in CI
+
+See: https://playwright.dev/dotnet/docs/ci-intro
