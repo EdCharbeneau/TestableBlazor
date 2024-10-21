@@ -5,24 +5,19 @@
 		<NumberOfTestWorkers>24</NumberOfTestWorkers>
 	</NUnit>
 	<!-- General run configuration -->
-	<!--<RunConfiguration>
+	<RunConfiguration>
 		<EnvironmentVariables>
-			--><!-- For debugging selectors, it's recommend to set the following environment variable --><!--
+			 For debugging selectors, it's recommend to set the following environment variable 
 			<DEBUG>pw:api</DEBUG>
 		</EnvironmentVariables>
-	</RunConfiguration>-->
+	</RunConfiguration>
 	<!-- Playwright -->
 	<Playwright>
-		<BrowserName>chromium</BrowserName>
+		<BrowserName>webkit</BrowserName>
 		<ExpectTimeout>5000</ExpectTimeout>
 		<LaunchOptions>
 			<Headless>false</Headless>
-			<!-- 
-			SlowMo is used to compensate for Blazor's diffing. 
-			Setting this value below 100 may result in test errors.
-			Blazor's diffing algo makes it prone to race conditions as Playwright moves too quickly.
-			-->
-			<SlowMo>80</SlowMo>
+			<SlowMo>1000</SlowMo>
 			<Channel>msedge</Channel>
 		</LaunchOptions>
 	</Playwright>
