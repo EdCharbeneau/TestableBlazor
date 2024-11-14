@@ -9,7 +9,7 @@ Some commands require the application to be running in the background.
 This command starts the codegen tool for the specified URL.
 
 ```shell
-pwsh bin\\Debug\\net8.0\\playwright.ps1 codegen https://localhost:7002
+pwsh bin\\Debug\\net9.0\\playwright.ps1 codegen https://localhost:7002
 ```
 
 ## Install Playwright
@@ -19,7 +19,7 @@ PowerShell 7.x required.
 Install Playwright browsers.
 
 ```shell
-pwsh bin\\Debug\\net8.0\\playwright.ps1 install
+pwsh bin\\Debug\\net9.0\\playwright.ps1 install
 ```
 
 ## Run Playwright Tests
@@ -46,7 +46,7 @@ dotnet test
 This command initializes the trace file viewer. After running tests a trace file can be viewed with step-by-step snapshots of the test process.
 
 ```shell
-pwsh bin\\Debug\\net8.0\\playwright.ps1 show-trace ClasName.TestName.zip
+pwsh bin\\Debug\\net9.0\\playwright.ps1 show-trace ClasName.TestName.zip
 ```
 
 ## Launch Configurations
